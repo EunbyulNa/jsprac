@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>비교연산자</title>
+    <style media="screen">
+      body {
+        background-color: yellow;
+      }
+      div {
+        width: 500px;
+        height: auto;
+        background-color:#fff;
+        margin: 200px auto;
+        text-align: center;
+        padding: 20px;
+        opacity: .9;
+      }
+
+      #first {
+        font-size: 20px;
+        padding-top: 20px;
+      }
+
+      #second {
+        line-height: 40px;
+        background-color: green;
+        color:#fff;
+
+      }
+
+     .third {
+       line-height: 40px;
+       background-color: blue;
+       color:#fff;
+     }
+
+     #fir, #secon,  #sec1,  #th1, #th2 {
+       color: red;
+       font-size: 20px;
+     }
+    </style>
+
+  </head>
+  <body>
+   <div class="">
+     <h1>시험성적</h1>
+     <p>1차: 50점/ 2차: 78점 (합격: 1차 60점/ 2차 70점이상)<p>
+       <br><br>
+     <p>모두 합격했나요? <span id="first"></span></p>
+     <p>둘중에 하나는 합격했나요? <span id="seco"></span></p>
+<p>둘다 떨어졌나요? <span id="third"></span></p>
+     </p>
+
+   </div>
+  </body>
+  <script type="text/javascript">
+var test1 = 50;
+var test2 = 78;
+var pass1 = 60;
+var pass2 = 70;
+
+var aa1 = (test1 >= pass1) && (test2 >= pass2);
+var elaa1 = document.getElementById('first');
+elaa1.textContent = aa1;
+
+var aa2 = (test1 >= pass1) || (test2 >= pass2);
+var elaa2 = document.getElementById('seco');
+elaa2.textContent = aa2;
+
+var aa3 = !((test1>=pass1) || (test2>=pass2));
+var elaa4 = document.getElementById('third');
+elaa4.textContent = aa3;
+
+
+
+
+
+  </script>
+</html>
